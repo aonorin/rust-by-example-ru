@@ -18,29 +18,29 @@ struct Rectangle {
 }
 
 fn main() {
-    // Создаем связь со структурой `Point`
+    // Создаём связь со структурой `Point`
     let point: Point = Point { x: 0.3, y: 0.4 };
 
     // Получаем доступ к полям структуры `point`
-    println!("point coordinates: ({}, {})", point.x, point.y);
+    println!("координаты точки: ({}, {})", point.x, point.y);
 
     // Деструктурируем `point` создавая связь с помощью `let`
     let Point { x: my_x, y: my_y } = point;
 
     let _rectangle = Rectangle {
-        // инициализация стуктуры так же является выражением
+        // инициализация структуры так же является выражением
         p1: Point { x: my_y, y: my_x },
         p2: point,
     };
 
-    // Создаем связь с единичной структурой
+    // Создаём связь с единичной структурой
     let _nil = Nil;
 
-    // Создаем связь с кортежной структурой
+    // Создаём связь с кортежной структурой
     let pair = Pair(1, 0.1);
 
     // Деструктурируем кортежную структуру
     let Pair(integer, decimal) = pair;
 
-    println!("pair contains {:?} and {:?}", integer, decimal);
+    println!("Pair хранит в себе {:?} и {:?}", integer, decimal);
 }

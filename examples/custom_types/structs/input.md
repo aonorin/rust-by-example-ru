@@ -2,19 +2,22 @@
 
 * Кортежная структура, которая, в общем, является именованным кортежем.
 * Классическую [C структуру][c_struct]
-* Единичную (unit) структуру, которая не имеет полей, но может быть полезна для дженериков.
+* Единичную структуру, которая не имеет полей, но может быть полезна для обобщённых типов.
 
 {structs.play}
 
 ### Задание
 
-1. Добавьте функцию `rect_area`, которая рассчитывает площадь прямоугольника. (попробуйте использовать "деструктуризацию" (разбор на части) ). 
-2. Добавьте функцию `square`, которая принимает в качестве аргументов `Point` и `f32`, а возвращает `Rectangle` with its lower left corner on the point, and a width and height corresponding to the `f32`.
+1. Добавьте функцию `rect_area`, которая рассчитывает площадь прямоугольника.
+(попробуйте использовать "деструктуризацию" (разбор на части) ).
+2. Добавьте функцию `square`, которая принимает в качестве аргументов `Point` и `f32`,
+а возвращает `Rectangle`, левый нижний угол которого соответствует `Point`, 
+а ширина и высота соответствуют `f32`.
 
 ### Смотрите также:
 
-[`attributes`][attributes] и [destructuring][destructuring]
+[`атрибуты`][attributes] и [деструктуризация][destructuring]
 
-[attributes]: /attribute.html
-[c_struct]: http://en.wikipedia.org/wiki/Struct_(C_programming_language)
-[destructuring]: /flow_control/match/destructuring.html
+[attributes]: ../attribute.html
+[c_struct]: https://ru.wikipedia.org/wiki/Структура_(язык_Си)
+[destructuring]: ../flow_control/match/destructuring.html

@@ -15,14 +15,8 @@ $ rustc fs.rs && ./fs
 `cat a/c/b.txt`
 > hello
 `ls a`
-> a/b.txt
-> a/c
-`walk a`
-> a/c
-> a/c/b.txt
-> a/c/e.txt
-> a/c/d
-> a/b.txt
+> "a/b.txt"
+> "a/c"
 `rm a/c/e.txt`
 `rmdir a/c/d`
 ```
@@ -39,8 +33,8 @@ a
 1 directory, 2 files
 ```
 
-### See also:
+### Смотрите также:
 
 [`cfg!`][cfg]
 
-[cfg]: /attribute/cfg.html
+[cfg]: ../attribute/cfg.html

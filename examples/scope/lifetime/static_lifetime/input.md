@@ -1,6 +1,6 @@
-A `'static` lifetime is longest possible lifetime, and lasts for 
-the lifetime of the running program. A `'static` lifetime may also be 
-coerced to a shorter lifetimes. There are two ways to make a variable 
+A `'static` lifetime is longest possible lifetime, and lasts for
+the lifetime of the running program. A `'static` lifetime may also be
+coerced to a shorter lifetimes. There are two ways to make a variable
 with `'static` lifetime, and both are stored in the read-only memory
 of the binary:
 
@@ -11,8 +11,8 @@ See the following example for a display of each method:
 
 {static_lifetime.play}
 
-### See also:
+### Смотрите также:
 
 [`'static` constants][static_const]
 
-[static_const]: /custom_types/constants.html
+[static_const]: ../../custom_types/constants.html

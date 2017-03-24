@@ -1,17 +1,18 @@
-// Define a function which takes a function as an argument and calls it.
-fn call_function<F: Fn()>(f: F) {
-    f()
+// Объявляем функцию, которая принимает обобщённый тип `F`,
+// ограниченный типажом `Fn`, и вызывает его.
+fn call_me<F: Fn()>(f: F) {
+    f();
 }
 
-// Define a simple function to be used as an input.
-fn print() {
-    println!("I'm a function!")
+// Объявляем функцию-обёртку, удовлетворяющую ограничению `Fn`
+fn function() {
+    println!("Я функция!");
 }
 
 fn main() {
-    // Define a closure similar to the `print()` function above.
-    let closure = || println!("I'm a closure!");
-    
-    call_function(closure);
-    call_function(print);
+    // Определяем замыкание, удовлетворяющее ограничению `Fn`
+    let closure = || println!("Я замыкание!");
+
+    call_me(closure);
+    call_me(function);
 }

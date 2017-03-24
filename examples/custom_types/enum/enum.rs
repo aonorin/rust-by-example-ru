@@ -20,18 +20,18 @@ enum Person {
 // Функция, которая принимает Person` в качестве аргумента
 // и не возвращает ничего.
 fn inspect(p: Person) {
-    // При использование `enum` компилятору необходимо указать, 
+    // При использование `enum` компилятору необходимо указать,
     // что нужно делать при каждом из возможных вариантов.
     // Для этого мы используем `match`.
     match p {
-        Person::Engineer  => println!("Is an engineer!"),
-        Person::Scientist => println!("Is a scientist!"),
+        Person::Engineer  => println!("Инженер!"),
+        Person::Scientist => println!("Учёный!"),
         // Деструктурируем `i` из `enum`.
-        Person::Height(i) => println!("Has a height of {}.", i),
-        Person::Weight(i) => println!("Has a weight of {}.", i),
+        Person::Height(i) => println!("Рост {}.", i),
+        Person::Weight(i) => println!("Вес {}.", i),
         // Деструктурируем `Info` в `name` и `height`.
         Person::Info { name, height } => {
-            println!("{} is {} tall!", name, height);
+            println!("{} довольно высокий! Рост {}!", name, height);
         },
     }
 }
@@ -39,8 +39,8 @@ fn inspect(p: Person) {
 fn main() {
     let person   = Person::Height(18);
     let amira    = Person::Weight(10);
-    // `to_owned()` создает копию `String` из среза строки.
-    let dave     = Person::Info { name: "Dave".to_owned(), height: 72 };
+    // `to_owned()` создаёт копию `String` из среза строки.
+    let dave     = Person::Info { name: "Дейв".to_owned(), height: 72 };
     let rebecca  = Person::Scientist;
     let rohan    = Person::Engineer;
 

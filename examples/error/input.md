@@ -1,22 +1,11 @@
-Error handling is the process of handling the possibility of failure. For 
-example, failing to read a file and then continuing to use that *bad* input 
-would clearly be problematic. Error handling allows us to notice and handle 
-those errors in an explicit fashion, saving the rest of the program from 
-potential issues.
+Обработка ошибок - это процесс обработки возможного отказа программы.
+Например, если вы не сможете прочитать содержимое файл,
+то потом продолжать использовать эти *некорректные* данные будет проблематично.
+Корректно управляя этими ошибками мы сможем сохранить
+работоспособность остальной части программы.
 
-The simplest error handling mechanism we will see is `panic`. It prints an 
-error message, starts unwinding the task, and usually exits the program. 
-Consider the following example:
+Более подробно тема обработки ошибок рассмотрена в [официальной книге][book].
+Так же можете ознакомится с [русскоязычным вариантом][ru_book].
 
-{error.play}
-
-This shows that we can induce program failure at will, but raises a 
-question: what happens if the princess is *not* given a gift? We *could* 
-explicitly test this with a check against the null string (`""`) as we do
-with the snake, but this is not reliable. The problem is that programmers do 
-not habitually test these checks unless required to by the compiler.
-
-In order for this to be reliable, we'll want the compiler to point out 
-cases where there may not be a gift. In this chapter, we will learn to use
-`Option` to take care of this condition, as well as various functions to 
-deal with the results of one or more uses of `Option`.
+[book]: https://doc.rust-lang.org/book/error-handling.html
+[ru_book]: http://rurust.github.io/rust_book_ru/src/error-handling.html

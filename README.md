@@ -2,9 +2,19 @@
 
 [![Build Status][travis-image]][travis-link]
 
+## От переводчика
+
+Перевод `Rust by examples` находится в процессе выполнения. За ходом перевода можно наблюдать [тут](https://github.com/ruRust/rust-by-example-ru/issues/1).
+
+Отдельное спасибо @suhr и @AKhranovskiy. Перевод основан на их работе.
+
+Буду рад помощи.
+
+Проверка правописания: [Яндекс.Спеллер][yaspeller]
+
 ## Что это за проект?
 
-Это исходный код сайта [Rust by Example][website], переведенный на русский язык! Перевод можно найти по адресу https://gordon-f.github.io/rust-by-example-ru
+Это исходный код сайта [Rust by Example][website], переведённый на русский язык! Перевод можно найти по адресу https://rurust.github.io/rust-by-example-ru
 
 ## Как помочь проекту?
 
@@ -75,7 +85,7 @@ make test
 
 ### Обработка `input.md`
 
-Вместо добавления кода на Rust в `input.md`, исходный код был сохранен в отдельном файле.
+Вместо добавления кода на Rust в `input.md`, исходный код был сохранён в отдельном файле.
 Данный шаг предварительной обработки добавит код в Markdown файл.
 
 Например, чтобы добавить исходный код из файла `hello.rs`, в Markdown файле используется следующий синтаксис
@@ -103,14 +113,9 @@ make test
 
 Более подробную информацию можно найти в файлах LICENSE-APACHE и LICENSE-MIT соответственно.
 
-## От переводчика
-
-Перевод `Rust by examples` находится в процессе выполнения. За ходом перевода можно наблюдать [тут](https://github.com/GordonFrikker/rust-by-example-ru/issues/1). 
-
-Буду рад помощи.
-
-[travis-image]: https://travis-ci.org/rust-lang/rust-by-example.svg?branch=master
-[travis-link]: https://travis-ci.org/rust-lang/rust-by-example
+[travis-image]: https://travis-ci.org/ruRust/rust-by-example-ru.svg?branch=master
+[travis-link]: https://travis-ci.org/ruRust/rust-by-example-ru
+[yaspeller]: https://tech.yandex.ru/speller/
 [website]: http://rustbyexample.com
 [how-to-contribute]: CONTRIBUTING.md
 [rust-lang]: http://www.rust-lang.org/
@@ -121,4 +126,3 @@ make test
 [hello-folder]: examples/hello
 [hello-rs]: examples/hello/hello.rs
 [hello-md]: examples/hello/input.md
-

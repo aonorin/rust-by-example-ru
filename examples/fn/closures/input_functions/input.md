@@ -1,16 +1,17 @@
-Since closures may be used as arguments, you might wonder if the same can be said 
-about functions. And indeed they can! However, because a function can 
-*never* capture variables, closures are strictly more flexible. Therefore, any 
-function which can take a closure as an argument can also take a function.
+Так как замыкания могут использоваться в аргументах, вы можете ожидать, что то
+же самое можно сказать и про функции. И это действительно так! Если вы
+объявляете функцию, принимающую замыкание как аргумент, то любая функция,
+удовлетворяющая ограничениям типажа этого замыкания, может быть передана как
+аргумент.
 
 {input_functions.play}
 
-As an additional note, the `Fn`, `FnMut`, and `FnOnce` `traits` dictate how
-a closure captures variables from the enclosing scope. 
+Стоит отметить, что типажи `Fn`, `FnMut` и `FnOnce` указывают, как
+замыкание захватывает переменные из своей области видимости.
 
-### See also:
+### Смотрите также:
 
-[`Fn`][fn], [`FnMut`][fn_mut], and [`FnOnce`][fn_once]
+[`Fn`][fn], [`FnMut`][fn_mut], и [`FnOnce`][fn_once]
 
 [fn]: http://doc.rust-lang.org/std/ops/trait.Fn.html
 [fn_mut]: http://doc.rust-lang.org/std/ops/trait.FnMut.html

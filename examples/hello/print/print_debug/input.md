@@ -3,15 +3,16 @@
 типов из `стандартной библиотеки (std)`. Все остальные типы *должны* иметь собственную реализацию.
 
 C помощью `типажа` `fmt::Debug` это сделать очень просто. *Все* типы могут
-`выводить (derive)` (автоматически создавать) реализацию `fmt::Debug`. Сделать подобное с `fmt::Display` невозможно, он должен быть реализовн вручную.
+`выводить` (автоматически создавать) реализацию `fmt::Debug`.
+Сделать подобное с `fmt::Display` невозможно, он должен быть реализован вручную.
 
 ```rust
-// Эта структура не может быть напечатана с помощью `fmt::Display` 
+// Эта структура не может быть напечатана с помощью `fmt::Display`
 // или с помощью `fmt::Debug`
 struct UnPrintable(i32);
 
-// Атрибут `выводить (derive)` автоматически реализует
-// необходимые методы, чтобы была возможность 
+// Атрибут `derive` автоматически реализует
+// необходимые методы, чтобы была возможность
 // печатать данную `структуру` с помощью `fmt::Debug`.
 #[derive(Debug)]
 struct DebugPrintable(i32);
@@ -21,15 +22,15 @@ struct DebugPrintable(i32);
 
 {debug.play}
 
-`fmt::Debug` дает возможность выводить информацию о обьектах на экран, жертвуя при этом элегантность. Реализовав типаж `fmt::Display` вручную можно исправить это.
+`fmt::Debug` даёт возможность выводить информацию о объектах на экран,
+жертвуя при этом элегантностью. Реализовав типаж `fmt::Display` вручную можно исправить это.
 
 ### Смотрите также
 
-[attributes][attributes], [`derive`][derive], [`std::fmt`][fmt],
-и [`struct`][structs]
+[атрибуты][attributes], [`derive`][derive], [`std::fmt`][fmt],
+и [`структуры`][structs]
 
 [attributes]: http://doc.rust-lang.org/reference.html#attributes
-[derive]: /trait/derive.html
+[derive]: ../../trait/derive.html
 [fmt]: http://doc.rust-lang.org/std/fmt/
-[structs]: /custom_types/structs.html
-
+[structs]: ../../custom_types/structs.html
