@@ -60,6 +60,7 @@ function initEditor() {
   var executeCode = function(ev) {
     resultDiv.style.display = "block";
     resultDiv.innerHTML = "Running...";
+    resultDiv.scrollIntoView();
 
     // Clear previous markers, if any
     markers.map(function(id) { editor.getSession().removeMarker(id); });
@@ -69,7 +70,7 @@ function initEditor() {
     runProgram(program, handleResult);
   };
 
-  ace.config.setModuleUrl('ace/mode/rust', '/gitbook/plugins/gitbook-plugin-rust-playpen/mode-rust.js');
+  ace.config.setModuleUrl('ace/mode/rust', '/rust-by-example-ru/gitbook/plugins/gitbook-plugin-rust-playpen/mode-rust.js');
 
   editor.setTheme("ace/theme/tomorrow");
   editor.getSession().setMode("ace/mode/rust");
